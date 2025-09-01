@@ -4,12 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN go build -o main .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main ./cmd/api/
 
 FROM alpine:latest AS application
 
-RUN adduser -D -h /home/admin -s /bin/bash -G root -u 1001 admin && \
-    adduser admin sudo
+RUN adduser -D -h /home/admin -s /bin/bash -G root -u 1001 admin
 
 USER admin
 
