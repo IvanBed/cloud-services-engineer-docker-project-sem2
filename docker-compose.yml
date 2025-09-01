@@ -1,0 +1,35 @@
+version: '3.8'
+
+networks:
+
+
+services:
+  backend:
+    image: backend:latest
+    container_name: 'backend'
+    ports:
+      - 8080:8080
+  
+  frontend: 
+    image: frontend:latest
+    container_name: 'frontend'
+    ports:
+      - 80:80
+    healthcheck:
+      
+    volulems:
+      
+    depends_on:
+      - 'backend'
+    
+    
+
+  
+    
+    
+    
+    
+    
+
+
+ 
