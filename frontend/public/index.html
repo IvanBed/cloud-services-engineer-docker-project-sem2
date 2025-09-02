@@ -12,9 +12,38 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <!-- Добавленный статический контент -->
+      <div class="container mt-5">
+        <div class="text-center">
+          <h1 class="display-4">🍲 Добро пожаловать в Пельменную №2!</h1>
+          <p class="lead">Лучшие пельмени в городе – сочные, вкусные и свежие!</p>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h3>Наше меню</h3>
+            <ul class="list-group">
+              <li class="list-group-item">Классические пельмени с мясом – 250 руб.</li>
+              <li class="list-group-item">Пельмени с курицей – 220 руб.</li>
+              <li class="list-group-item">Вегетарианские пельмени – 200 руб.</li>
+              <li class="list-group-item">Чай или компот – 50 руб.</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Адрес: ул. Пельменная, 2</p>
+            <p><i class="fas fa-phone"></i> Телефон: +7 (123) 456-78-90</p>
+            <p><i class="fas fa-clock"></i> Время работы: 10:00 - 22:00</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-primary">Заказать онлайн</button>
+        </div>
+      </div>
+    </div>
     <script src="https://kit.fontawesome.com/a9ae183e88.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- built files will be auto injected -->
   </body>
 </html>
+
