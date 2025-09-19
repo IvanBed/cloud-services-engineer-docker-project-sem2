@@ -1,4 +1,4 @@
-FROM golang:1.17 as build-stage
+FROM golang:1.24.3 as build-stage
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 go build -o main ./cmd/api/
 
-FROM alpine:latest as production-stage
+FROM alpine:3.21.3 as production-stage
 
 RUN adduser -D -u 1001 admin
 
